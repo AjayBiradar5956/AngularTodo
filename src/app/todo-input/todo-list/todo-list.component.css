@@ -27,7 +27,3 @@
     border: none;
     font-size: 25px;
 }
-
-.deleteButton:hover {
-    color: red;
-}
