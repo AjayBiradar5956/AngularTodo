@@ -1,0 +1,19 @@
+.editInputFields {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 25px;
+    padding: 2px;
+}
+
+button {
+    margin-top: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: x-large;
+}

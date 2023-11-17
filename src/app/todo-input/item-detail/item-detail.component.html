@@ -1,0 +1,18 @@
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="staticBackdropLabel">Edit Task</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="editInputFields">
+            <input placeholder="{{task.name}}" [(ngModel)]="editedTask.name" type="text" />
+            <input type="date" [(ngModel)]="editedTask.date" />
+            <select required [(ngModel)]="editedTask.priority">
+                <option>Urgent</option>
+                <option>Normal</option>
+            </select>
+            <button type="button" class="btn btn-warning" (click)="editTask()">Warning</button>
+        </div>
+    </div>
+</div>

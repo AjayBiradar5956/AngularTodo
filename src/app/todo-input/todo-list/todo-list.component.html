@@ -1,0 +1,26 @@
+<div class="listContainer">
+    <h2>View List</h2>
+    <div class="itemMenu" *ngIf="task.length>0">
+        <div><strong>Index</strong></div>
+        <div><strong>Name</strong></div>
+        <div><strong>Due Date</strong></div>
+        <div><strong>Priority</strong></div>
+        <div><strong>Action</strong></div>
+    </div>
+
+    <!-- Here render your list -->
+    <div class="itemMenu" *ngFor="let item of task ; let i = index"
+        [ngStyle]="{backgroundColor:item.priority.toLowerCase()==='urgent'?'red':'green',color:'white'}">
+        <div>{{i+1}}</div>
+        <div>{{item.name}}</div>
+        <div>{{item.date}}</div>
+        <div>{{item.priority}}</div>
+        <div>
+            <button style="margin-right: 15px;" (click)="editTask(item.id)" class="btn btn-primary" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="deleteButton" (click)="deleteTask(item.id)"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+</div>

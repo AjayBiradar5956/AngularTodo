@@ -1,0 +1,33 @@
+.listContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: lightpink;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemMenu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.itemMenu div {
+    margin-left: 15px;
+}
+
+.deleteButton {
+    background-color: inherit;
+    color: black;
+    border: none;
+    font-size: 25px;
+}
+
+.deleteButton:hover {
+    color: red;
+}
