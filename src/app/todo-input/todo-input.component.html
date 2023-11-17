@@ -1,11 +1,26 @@
 <div class="inputContainer">
     <h1 class="font-sans text-3xl font-bold my-3">Add New Task</h1>
-    <input [(ngModel)]="task.name" placeholder="Task Name" type="text" />
-    <input [(ngModel)]="task.date" placeholder="Task Due Date" type="date" />
-    <select [(ngModel)]="task.priority">
-        <option>Urgent</option>
-        <option>Normal</option>
-    </select>
+    <div class="labelInput">
+        <label for="taskInput">
+            <h5>Task Name</h5>
+        </label>
+        <input [(ngModel)]="task.name" placeholder="Task Name" type="text" id="taskInput" />
+    </div>
+    <div class="labelInput">
+        <label for="taskInput">
+            <h5>Due Date</h5>
+        </label>
+        <input [(ngModel)]="task.date" placeholder="Task Due Date" type="date" id="taskInput" />
+    </div>
+    <div class="labelInput">
+        <label for="taskInput">
+            <h5>Select Priority</h5>
+        </label>
+        <select [(ngModel)]="task.priority" id="taskInput">
+            <option>Urgent</option>
+            <option>Normal</option>
+        </select>
+    </div>
     <div class="d-grid gap-2 col-2 mx-auto">
         <button (click)="addTask()" class="btn btn-primary" type="button">Add Task</button>
     </div>
