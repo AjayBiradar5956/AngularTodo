@@ -6,9 +6,9 @@
     </div>
     <div class="offcanvas-body">
         <div class="editInputFields">
-            <input placeholder="{{task.name}}" [(ngModel)]="editedTask.name" type="text" />
-            <input type="date" [(ngModel)]="editedTask.date" />
-            <select required [(ngModel)]="editedTask.priority">
+            <input value="{{task.name}}" [(ngModel)]="editedTask.name" type="text" />
+            <input type="date" value="{{task.date}}" [(ngModel)]="editedTask.date" />
+            <select value="{{task.priority}}" [(ngModel)]="editedTask.priority">
                 <option>Urgent</option>
                 <option>Normal</option>
             </select>
