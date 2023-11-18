@@ -6,13 +6,15 @@
     </div>
     <div class="offcanvas-body">
         <div class="editInputFields">
-            <input value="{{task.name}}" [(ngModel)]="editedTask.name" type="text" />
-            <input type="date" value="{{task.date}}" [(ngModel)]="editedTask.date" />
-            <select value="{{task.priority}}" [(ngModel)]="editedTask.priority">
+            <input value="{{task.name}}" type="text" (change)="changedName($event)" />
+            <input type="date" value="{{task.date}}" (change)="changedDate($event)" />
+            <select value="{{task.priority}}" (change)="changedPriority($event)">
                 <option>Urgent</option>
                 <option>Normal</option>
             </select>
-            <button type="button" class="btn btn-warning" (click)="editTask()">Modify Task</button>
+            <button type="button" class="btn btn-warning" (click)="editTask()">
+                Modify Task
+            </button>
         </div>
     </div>
 </div>

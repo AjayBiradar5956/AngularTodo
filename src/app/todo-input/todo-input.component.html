@@ -25,6 +25,7 @@
         <button (click)="addTask()" class="btn btn-primary" type="button">Add Task</button>
     </div>
 </div>
-<todo-list [task]="allTasks" (taskNeedsToGetDeleted)="onDeletion($event)"
-    (taskNeedsToGetEdited)="onEdit($event)"></todo-list>
+
+<todo-list [task]="allTasks" (taskNeedsToGetDeleted)="onDeletion($event)" (taskNeedsToGetEdited)="onEdit($event)">
+</todo-list>
 <item-detail [task]="selectedTask" (onEditTaskButtonClicked)="EditOperation($event)"></item-detail>

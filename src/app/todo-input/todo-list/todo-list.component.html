@@ -11,10 +11,10 @@
     <!-- Here render your list -->
     <div class="itemMenu" *ngFor="let item of task ; let i = index"
         [ngStyle]="{backgroundColor:item.priority.toLowerCase()==='urgent'?'red':'green',color:'white'}">
-        <div>{{i+1}}</div>
-        <div>{{item.name}}</div>
-        <div>{{item.date}}</div>
-        <div>{{item.priority}}</div>
+        <div style="margin-left: 55px;">{{i+1}}</div>
+        <div style="margin-left: 55px;">{{item.name}}</div>
+        <div style="margin-left: 55px;">{{item.date}}</div>
+        <div style="margin-left: 55px;">{{item.priority}}</div>
         <div>
             <button style="margin-right: 15px;" (click)="editTask(item.id)" class="btn btn-primary" type="button"
                 data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
